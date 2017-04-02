@@ -3,9 +3,13 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevelAfter;
+	public bool autoLoad = false;
 
 	void Start() {
-		Invoke("LoadNextLevel", autoLoadNextLevelAfter);
+		if(autoLoad) {
+			Debug.Log ("Auto loading next level");
+			Invoke("LoadNextLevel", autoLoadNextLevelAfter);
+		}
 	}
 
 	public void LoadLevel(string name) {		
