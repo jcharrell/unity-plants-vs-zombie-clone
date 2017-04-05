@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LevelManager : MonoBehaviour {
-	public float autoLoadNextLevelAfter;
+	public float autoLoadNextLevelAfter = 0;
 
 	void Start() {
 		if(autoLoadNextLevelAfter != 0) {
