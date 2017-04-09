@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevelAfter = 0;
 
 	void Start() {
-		if(autoLoadNextLevelAfter == 0) {
+		if(autoLoadNextLevelAfter != 0) {
 			Invoke("LoadNextLevel", autoLoadNextLevelAfter);
 		}
 	}
